@@ -1,0 +1,184 @@
+:root{
+    --main-color: #470053 ;
+    --hov-color:#51045f ;
+}
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #222;
+    color: #fff;
+    font-family: system-ui;
+}
+.crud{
+    width: 80%;
+    margin:50px auto;
+}
+.head{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0 ;
+}
+.inputs input,
+.outputs input{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    background-color: #111;
+    margin: 6px 0;
+    border-radius: 6px;
+    padding: 10px;
+    color: #fff;
+    transition: 0.5s;
+}
+input:focus{
+    background-color: #000;
+    transform: scale(1.1);
+}
+.price input{
+    width: 20%;
+}
+#total{
+    background-color: #a00d02;
+    padding: 6px;
+    border-radius: 6px;
+    
+}
+#total::before{
+    content: "Total: ";
+}
+button{
+    width: 100%;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background-color:var(--main-color);
+    border-radius: 20px;
+    color: #fff;
+    text-transform: capitalize;
+    transition: 0.5s;
+}
+/* button:hover{
+    background-color: var(--hov-color); 
+} */
+.btnsearch{
+    display: flex;
+    justify-content: space-between;
+}
+.btnsearch button{
+    width: 45%;
+}
+table{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+table th{
+    text-transform: uppercase;
+}
+th,td{
+    padding: 5px;
+}
+#delall{
+    margin: 20px 0;
+}
+
+
+
+
+
+/* start settings box */
+.settings-box{
+    position: fixed;
+    left: -200px;
+    top: 0;
+    background-color: #fff;
+    width: 200px;
+    z-index: 10000;
+    min-height: 100vh;
+    transition: 0.5s;
+}
+.settings-box.open{
+    left: 0;
+}
+.settings-box .toggle-settings{
+    position: absolute;
+    right: -30px;
+    top: 100px;
+    color: #000;
+    background-color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+.settings-box .fa-gear{
+    width: 30px;
+    padding: 8px 0;
+}
+
+.settings-box .options-box {
+    padding: 30px;
+    text-align: center;
+    background-color: #eee;
+}
+.settings-box .options-box h4{
+    margin: 0;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    font-size: 30px;
+    color: #000;
+}
+.settings-box .colors-list{
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+.settings-box .colors-list li{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    margin:0 5px 5px 0;
+    border: 3px solid #eee;
+}
+.settings-box .colors-list li.active{
+    border-color: white;
+}
+.settings-box .colors-list li:first-child{
+    background-color: #470053;
+}
+.settings-box .colors-list li:nth-child(2){
+    background-color: #e91e63;
+}
+.settings-box .colors-list li:nth-child(3){
+    background-color: #009688;
+}
+.settings-box .colors-list li:nth-child(4){
+    background-color: #c1292e;
+}
+.settings-box .colors-list li:nth-child(5){
+    background-color: #23395b;
+}
+.settings-box .colors-list li:nth-child(6){
+    background-color: #406e8e;
+}
+.settings-box .colors-list li:nth-child(7){
+    background-color: #002a32;
+}
+.settings-box .colors-list li:nth-child(8){
+    background-color: #3f784c;
+}
+.settings-box .colors-list li:nth-child(9){
+    background-color: #e6acee;
+}
+.settings-box .colors-list li:nth-child(10){
+    background-color: #ed7d3a;
+}
+/* end mood box */
+/* end settings box */
